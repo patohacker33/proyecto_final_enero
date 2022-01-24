@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+<!-- < {%with messages = get_flashed_messages()%}
+{%if messages %}
+{%for message in messages%}
+    
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    {{message}}
+</div>
+{%endfor%}
+{%endif%}
+{%endwith%} -->
+<div class="container-fluid pt-5" style="width: 700px;">
+    <h4>Puedes dejar tus datos para contactarnos</h4>
+    <form action="/add_contact" method="POST">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombres</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" " name="nombres" placeholder="Nombres">
+                    
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Apellidos</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="apellidos" placeholder="Apellidos">
+                    
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Correo electrónico</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Correo">
+                    
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Teléfono</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="telefono" placeholder="Teléfono">
+                    
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mensaje</label>
+                    <textarea name="mensaje" placeholder="Dejanos un mensaje.." class="form-control" id="exampleFormControlTextarea1"  rows="3"></textarea>
+                </div>
+            </div>
+            <div class="col pt-4">
+                
+                    
+                      <!-- <label for="banner">Si tienes</label> -->
+                      
+                          <label class="input-group-btn">
+                              <span class="btn btn-white btn-file">
+                                <b>Si tiene certificado de Discapacidad adjuntelo aquí</b>  <input accept=".jpg,.png,.jpeg,.gif" class="hidden" name="banner" type="file" id="banner">
+                              </span>
+                          </label>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <button type="submit" class="btn btn-success">Enviar datos</button>
+        </div>
+        
+    </form>
+</div>
+{% endblock %}

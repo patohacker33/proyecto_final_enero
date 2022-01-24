@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+{%with messages = get_flashed_messages()%}
+{%if messages %}
+{%for message in messages%}
+    
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    {{message}}
+</div>
+{%endfor%}
+{%endif%}
+{%endwith%}
+<div class="container-fluid pt-4"> 
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+          <!-- <th scope="col">Email</th>
+            <th scope="col">Teléfono</th> -->
+            <th class="col-sm-4" scope="col">Nombre</th>
+            <th scope="col">Mensaje</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contact in contacts%}
+      <tr>
+        <th>{{contact.1}} {{contact.2}}</th>
+        <!-- <td>{{contact.3}}</td>
+        <td>{{contact.4}}</td> -->
+        <td>{{contact.5}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  </div>
+{% endblock %}

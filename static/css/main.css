@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Space+Mono&family=Ubuntu:wght@300&display=swap");
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(-45deg, #e3ddd9 50%, #f1c6b8 50%);
+  /* font-family: "Space Mono", monospace; */
+  font-family: "Ubuntu", sans-serif;
+}
+.fuenteOoooBaby {
+  font-family: "Oooh Baby", cursive;
+}
+.bold {
+  font-size: larger;
+  font-weight: bold;
+}
+footer {
+  position: fixed;
+  height: 70px;
+  bottom: 0px;
+  width: 100%;
+}
